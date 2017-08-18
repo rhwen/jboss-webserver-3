@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Red Hat JBoss Web Server 3.1 Tomcat 8 with Oracle JDK 8
+    openshift.io/image.dockerRepositoryCheck: 2017-08-14T08:26:51Z
+  creationTimestamp: null
+  generation: 2
+  name: oracle-jdk-webserver31-tomcat8-openshift
+spec:
+  dockerImageRepository: registry.access.redhat.com/jboss-webserver-3/oracle-jdk-webserver31-tomcat8-openshift
+  tags:
+  - annotations:
+      description: JBoss Web Server 3.1 Tomcat 8 with Oracle JDK 8 S2I images.
+      iconClass: icon-jboss
+      openshift.io/display-name: Red Hat JBoss Web Server 3.1 Tomcat 8 with Oracle JDK 8
+      sampleContextDir: tomcat-websocket-chat
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts.git
+      supports: tomcat8:3.1,tomcat:8,java:8,xpaas:1.4
+      tags: builder,tomcat,tomcat8,java,jboss,xpaas
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.access.redhat.com/jboss-webserver-3/oracle-jdk-webserver31-tomcat8-openshift:latest
+    generation: 2
+    importPolicy:
+      insecure: true
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
