@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/jboss-webserver-3/webserver30-tomcat8-openshift:latest
+FROM registry.access.redhat.com/jboss-webserver-3/webserver31-tomcat8-openshift:latest
 
 ENV JAVA_HOME="/opt/jdk1.8.0_131" \
     JAVA_VENDOR="Oracle" \
